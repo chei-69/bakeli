@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="menu">
+        <button id="btn" aria-expanded = "false">Insertion <i class="fa-solid fa-circle-chevron-down"></i></button>
+
+        <div class="panneau" id="panneau">
+            <a href="#">Insertion professionnelle</a>
+            <a href="#">Bakeli Work</a>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById("btn");
+        const panneau = document.getElementById("panneau");
+
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const ouvert = panneau.classList.toggle("ouvert");
+            btn.setAttribute("aria-expanded", ouvert);
+        })
+
+        //Ferme au clic ailleurs
+        document.addEventListener("click", () => {
+            panneau.classList.remove("ouvert");
+            btn.setAttribute("aria-expanded", "false");
+
+            //Ferme avec la touche echap
+            document.addEvenListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    panneau.classList.remove("ouvert");
+                    btn.setAttribute("expanded", "false");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
