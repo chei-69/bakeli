@@ -1,12 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakeli</title>
-</head>
-<body>
-    <p>chico</p>
-    <p>Papi</p>
-</body>
-</html>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+                    <script>
+                        tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+                }
+                }
+            }
+            }
+                    </script>
+                    <title>Bakeli</title>
+                </head>
+                    <body lass="bg-white font-sans text-gray-800 antialiased">
+                        <header class="sticky top-0 z-50 bg-white shadow">
+            <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+
+            <a href="index.html" class="shrink-0">
+                <img src="images/logo.png" alt="Bakeli School of Technology" class="h-10 w-auto">
+            </a>
+
+            
+            <nav class="hidden lg:block" aria-label="Menu principal">
+                <ul class="flex items-center gap-8 font-medium">
+                <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+                <li class="group relative py-2">
+                    <a href="#" class="text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+                    <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <li>
+                    <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft bg-bakeli-soft">
+                        <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                        <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="formations-diplomantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                        <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                        <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                        <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                        <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+                    </a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="group relative py-2">
+                    <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+                    <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <li>
+                    <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                        <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                        <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+                    </a>
+                    </li>
+                    </ul>
+                </li>
+                <li><a href="coachs.html" class="hover:text-bakeli-orange">Coachs</a></li>
+                <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+                <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+                <li><a href="bourses.html" class="hover:text-bakeli-orange">Bourses</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white hidden lg:inline-flex">Contacter Bakeli</a>
+                <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 hidden lg:inline-flex">S'inscrire</a>
+
+                
+                <details class="relative lg:hidden">
+                <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+                <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+                    <ul class="space-y-3 font-medium">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>Formations</li>
+                <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+                <li><a href="formations-diplomantes.html" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+                <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+                <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+                    <li><a href="coachs.html">Coachs</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bourses.html">Bourses</a></li>
+                    </ul>
+                    <div class="mt-5 flex flex-col gap-3">
+                    <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+                    <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+                    </div>
+                </div>
+                </details>
+            </div>
+            </div>
+        </header>
+
+                    <main>
+                        <section class="bg-white min-h-screen flex flex-col accueil"  id="accueil">
+                            <p>⚡ Volkeno vous offre une chance unique !</p>
+                            <div class="principal" class="flex-wrap">
+                                <div class="princi">
+                                    <h2>Volkeno offre des bourses pour 6 mois de formation Bakeli !</h2>
+                                    <p>Nous croyons que le talent ne devrait jamais être limité par des contraintes financières. Bakeli, en partenariat avec Volkeno, offre une bourse exceptionnelle couvrant <span>70% des frais de formation</span></p>
+                                    <div class="infos">
+                                        <select name=""  id="" aria-placeholder="">
+                                            <option value="">Choisir ma formation</option>
+                                            <option value="">Analyse de l'IA et donné</option>
+                                            <option value="">Developement web et mobile</option>
+                                            <option value="">Developement back end</option>
+                                            <option value="">Community management</option>
+                                            <option value="">Informatique de gestion</option>
+                                            <option value="">Design graphique et audiovisuel</option>
+                                        </select>
+                                        <a href="#">En savoir plus</a>
+                                    </div>
+                                </div>
+                                <div class="princip">
+                                    <img src="accueil.jfif" alt="">
+                                </div>
+                            </div>
+                            <div class="cards">
+                                <div class="card">
+                                    <h3 style="color: orange;">70%</h3>
+                                    <p>Frais couverts</p>
+                                </div>
+                                <div class="card">
+                                    <h3 style="color: blue;">150</h3>
+                                    <p>Bourses disponibles</p>
+                                </div>
+                                <div class="card">
+                                    <h3>6</h3>
+                                    <p>Mois de formation</p>
+                                </div>
+                                <div class="card">
+                                    <h3 style="color: green;">+2000</h3>
+                                    <p>Diplômés</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="information">
+                            <p class="uni">+2000 Étudiants formés</p>
+                            <h4>Formez-vous aux métiers de demain !</h4>
+                            <p>Améliorez vos compétences dans le domaine de vos rêves en suivant l'un de nos programmes de formation.</p>
+                            <div class="cards-a">
+                                <div class="card-a">
+                                    <div class="el">
+                                    <img src="file-word-solid.png" alt="">
+                                    <h6>Secrétariat Bureautique</h6>
+                                    </div>
+                                    <p>L’efficacité au cœur de l’action administrative Vous aimez l’organisation, la rigueur et la polyvalence ? Cette formation vous forme aux outils bureautiques essentiels, à la gestion documentaire et à la communication</p>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="web.png" alt="">
+                                        <h6>Développement web et mobile</h6>
+                                    </div>
+                                    <p>À une époque où tout le monde est connecté, il est primordial pour toute entreprise d’avoir un site Internet ou une application mobile. Le développement Web et mobile représente une grande opportunité pour les entreprises de</p>
+                                    <a href="#">En savoir plus</a>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="lightbulb-solid.png" alt="">
+                                        <h6>Marketing et Communication digitale</h6>
+                                    </div>
+                                    <p>Le Marketing Digital désigne l’utilisation des canaux numériques afin de vendre un produit ou un service tout en promouvant sa marque ! L’objectif principal de cette discipline est d’augmenter le nombre de visites sur la</p>
+                                    <a href="">En savoir plus</a>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="magnifying-glass-solid.png" alt="">
+                                        <h6>Informatique de Gestion</h6>
+                                    </div>
+                                    <p>Maîtrisez l’art de faire parler les données À l’intersection du digital et de la performance, cette formation vous prépare à automatiser les processus, structurer l’information et piloter l’activité d’une entreprise à l’ère numérique.</p>
+                                    <a href="">En savoir plus</a>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="house-solid.png" alt="">
+                                        <h6>Webmaster & Réseaux Sociaux</h6>
+                                    </div>
+                                    <p>Soyez le chef d’orchestre de la présence digitale De la gestion de site web à l’animation de communautés en ligne, cette formation vous arme pour piloter la visibilité et l’engagement d’une entreprise. Avec une approche 360°, vous devenez un profes</p>
+                                    <a href="">En savoir plus</a>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="Soyez le bras droit des dirigeants d’entreprise Comptabilité, ressources humaines, gestion commerciale, organisation des opérations : cette formation vous donne toutes les clés pour accompagner la gestion d’une PME avec efficacité et autonomie. Avec Bakeli, vous" alt="">
+                                        <h6>Assistant de Gestion de PME/PMI</h6>
+                                    </div>
+                                    <p>Soyez le bras droit des dirigeants d’entreprise Comptabilité, ressources humaines, gestion commerciale, organisation des opérations : cette formation vous donne toutes les clés pour accompagner la gestion d’une PME avec efficacité et autonomie. Avec Bakeli, vous</p>
+                                    <a href="">En savoir plus</a>
+                                </div>
+                                <div class="card-a">
+                                    <div class="el">
+                                        <img src="" alt="">
+                                        <h6>Infographie</h6>
+                                    </div>
+                                    <p>Créez l’émotion par le design Maîtrisez les outils du desin et bien plus pour concevoir des visuels percutants, harmonieux et alignés avec l’image de marque. Chez Bakeli, vous ne faites pas que “dessiner” : vous racontez des histoires, vous donnez vie aux idé</p>
+                                    <a href="">En savoir plus</a>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <footer class="bg-gray-100 text-gray-700">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+
+        <div>
+            <img src="images/logo.png" alt="Bakeli" class="h-10 w-auto">
+            <p class="mt-4 text-sm leading-relaxed">
+            Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+            Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+            </p>
+            <ul class="mt-5 flex flex-wrap gap-2">
+            <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+            <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+            <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+            <li><a href="coachs.html" class="hover:text-bakeli-orange">Nos coachs</a></li>
+            <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+            <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+            <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+            <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+            <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
+        <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
+    </a>
+
+                </body>
+                </html>
