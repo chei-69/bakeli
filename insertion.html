@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
-    <link rel="stylesheet" href="style1.css">
-</head>
-<body>
-    <div class="menu">
-        <button id="btn" aria-expanded = "false">Insertion <i class="fa-solid fa-circle-chevron-down"></i></button>
-
-        <div class="panneau" id="panneau">
-            <a href="#">Insertion professionnelle</a>
-            <a href="#">Bakeli Work</a>
-        </div>
-    </div>
-    <script>
-        const btn = document.getElementById("btn");
-        const panneau = document.getElementById("panneau");
-
-        btn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const ouvert = panneau.classList.toggle("ouvert");
-            btn.setAttribute("aria-expanded", ouvert);
-        })
-
-        //Ferme au clic ailleurs
-        document.addEventListener("click", () => {
-            panneau.classList.remove("ouvert");
-            btn.setAttribute("aria-expanded", "false");
-
-            //Ferme avec la touche echap
-            document.addEvenListener("keydown", (e) => {
-                if (e.key === "Escape") {
-                    panneau.classList.remove("ouvert");
-                    btn.setAttribute("expanded", "false");
-                }
-            })
-        })
-    </script>
+<html lang="fr">
+    <head>
+        <title>insertion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{teal:"#009688",orange:"#FFB74D","orange-fonce":"#FF9800"},fontFamily:{outfit:["Outfit","sans-serif"],inter:["Inter","sans-serif"]}}}}</script></head>
+<body class="font-inter">
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white px-6 py-3 shadow-md lg:px-16">
+  <a href="index.html" class="flex items-center gap-2 text-teal"><i class="fa-solid fa-spinner text-orange-fonce"></i><span class="font-medium">Bakeli Work</span></a>
+  <nav><ul class="hidden items-center gap-8 text-sm md:flex">
+    <li><a href="index.html" class="hover:text-teal">Accueil</a></li>
+    <li><a href="projets.html" class="hover:text-teal">Projets</a></li>
+    <li><a href="offres.html" class="hover:text-teal">Offres d'emploi</a></li>
+    <li><a href="radar.html" class="hover:text-teal">Bakeli Radar</a></li>
+    <li><a href="insertion.html" class="border-b-2 border-teal pb-1">Insertion</a></li>
+    <li class="group relative"><button type="button" class="flex items-center gap-1 hover:text-teal">Explorer <i class="fa-solid fa-chevron-down text-xs"></i></button>
+      <div class="absolute left-0 top-full hidden w-44 pt-3 group-hover:block group-focus-within:block"><div class="rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+        <a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Entreprises</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Etablissements</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Templates</a></div></div></li>
+  </ul></nav>
+  <button type="button" class="rounded-full bg-orange-fonce px-6 py-2.5 text-sm font-medium text-white hover:opacity-90">Se connecter</button>
+</header>
+<div class="p-10">
+<div class="relative inline-block">
+  <button id="btn" aria-expanded="false" class="flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-800 transition hover:bg-gray-100">Insertion <i class="fa-solid fa-circle-chevron-down text-sm"></i></button>
+  <div id="panneau" class="absolute left-0 top-full mt-2 hidden w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+    <a href="#" class="block rounded-lg px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Insertion professionnelle</a>
+    <a href="index.html" class="block rounded-lg px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bakeli Work</a>
+  </div>
+</div>
+<script>
+const btn=document.getElementById("btn"),panneau=document.getElementById("panneau");
+function fermer(){panneau.classList.add("hidden");btn.setAttribute("aria-expanded","false")}
+btn.addEventListener("click",e=>{e.stopPropagation();btn.setAttribute("aria-expanded",!panneau.classList.toggle("hidden"))});
+document.addEventListener("click",fermer);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")fermer()});
+</script>
+</div>
 </body>
 </html>
