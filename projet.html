@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>projets</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{teal:"#009688",orange:"#FFB74D","orange-fonce":"#FF9800"},fontFamily:{outfit:["Outfit","sans-serif"],inter:["Inter","sans-serif"]}}}}</script></head>
+<body class="bg-gray-100 font-inter text-gray-800">
+<header class="sticky top-0 z-20 flex items-center justify-between bg-white px-6 py-3 shadow-md lg:px-16">
+  <a href="index.html" class="flex items-center gap-2 text-teal"><i class="fa-solid fa-spinner text-orange-fonce"></i><span class="font-medium">Bakeli Work</span></a>
+  <nav><ul class="hidden items-center gap-8 text-sm md:flex">
+    <li><a href="index.html" class="hover:text-teal">Accueil</a></li>
+    <li><a href="projets.html" class="border-b-2 border-teal pb-1">Projets</a></li>
+    <li><a href="offres.html" class="hover:text-teal">Offres d'emploi</a></li>
+    <li><a href="radar.html" class="hover:text-teal">Bakeli Radar</a></li>
+    <li><a href="insertion.html" class="hover:text-teal">Insertion</a></li>
+    <li class="group relative"><button type="button" class="flex items-center gap-1 hover:text-teal">Explorer <i class="fa-solid fa-chevron-down text-xs"></i></button>
+      <div class="absolute left-0 top-full hidden w-44 pt-3 group-hover:block group-focus-within:block"><div class="rounded-xl bg-white p-2 shadow-lg ring-1 ring-black/5">
+        <a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Entreprises</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Etablissements</a><a href="#" class="block rounded-lg px-4 py-2 hover:bg-gray-100">Templates</a></div></div></li>
+  </ul></nav>
+  <button type="button" class="rounded-full bg-orange-fonce px-6 py-2.5 text-sm font-medium text-white hover:opacity-90">Se connecter</button>
+</header>
+<main>
+<section class="grid items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-20">
+  <div>
+    <h1 class="text-4xl font-bold leading-tight text-black lg:text-5xl">Trouvez le <span class="text-orange">projet idéal</span> et valorisez vos compétences en véritables <span class="text-orange">opportunités</span>.</h1>
+    <p class="mt-5 max-w-xl text-gray-500">Travaillez sur des projets réels, valorisez votre savoir-faire et collaborez avec des experts. C'est l'occasion idéale de construire votre portfolio tout en étant rémunéré.</p>
+    <div class="mt-6 flex flex-wrap items-center gap-6 text-sm">
+      <div class="flex items-center gap-3"><div class="flex -space-x-3"><img src="images/image1_bakeli.png" alt="" class="size-10 rounded-full border-2 border-white object-cover"><img src="images/image2.png" alt="" class="size-10 rounded-full border-2 border-white object-cover"><img src="images/image3.png" alt="" class="size-10 rounded-full border-2 border-white object-cover"></div><strong>31K+ Talents</strong></div>
+      <div class="flex items-center gap-2"><span class="relative grid size-10 place-items-center text-teal"><i class="fa-solid fa-certificate text-4xl opacity-40"></i><i class="fa-solid fa-check absolute text-sm"></i></span><strong>Profils vérifiés</strong></div>
+    </div>
+    <form action="#" class="mt-6 flex flex-col gap-2 rounded-2xl bg-white p-2 shadow-md md:flex-row md:items-center md:rounded-full">
+      <input type="text" placeholder="Intitulé de l'entreprise" aria-label="Intitulé de l'entreprise" class="flex-1 rounded-full px-4 py-2 text-sm outline-none">
+      <select aria-label="Type de projet" class="flex-1 border-gray-200 bg-transparent px-3 py-2 text-sm outline-none md:border-l"><option>Sélectionnez le projet</option><option>UI/UX</option><option>Developpement</option><option>Marketing</option></select>
+      <select aria-label="Secteur d'activité" class="flex-1 border-gray-200 bg-transparent px-3 py-2 text-sm outline-none md:border-l"><option>Secteur d'activité</option><option>Tech</option><option>Finance</option></select>
+      <button type="submit" class="rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white hover:bg-orange-fonce">Rechercher</button>
+    </form>
+    <p class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500"><span class="grid size-8 place-items-center rounded-full bg-teal/10 text-teal"><i class="fa-solid fa-bars-staggered text-xs"></i></span>+500 entreprises nous font confiance<span class="h-5 w-px bg-gray-300"></span><span class="text-orange">★★★★★</span>4.8/5 Note</p>
+  </div>
+  <div class="relative mx-auto h-96 w-full max-w-md">
+    <img src="images/image6.png" alt="Étudiante" class="h-full w-full rounded-[3rem] bg-orange-fonce object-cover">
+    <span class="absolute left-4 top-4 grid size-10 place-items-center rounded-xl bg-white text-orange shadow"><i class="fa-solid fa-check"></i></span>
+  </div>
+</section>
+<section class="flex flex-wrap gap-3 px-6 pb-8 lg:px-20" aria-label="Catégories de projets">
+  <button type="button" class="rounded-full bg-orange px-5 py-2 text-sm font-semibold text-white">Tous les projets</button>
+  <button type="button" aria-expanded="false" class="flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-medium shadow-sm hover:bg-gray-100"><i class="fa-solid fa-terminal text-teal"></i>Programmation<i class="fa-solid fa-chevron-down text-xs"></i></button>
+  <button type="button" aria-expanded="false" class="flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-medium shadow-sm hover:bg-gray-100"><i class="fa-solid fa-palette text-teal"></i>Design<i class="fa-solid fa-chevron-down text-xs"></i></button>
+</section>
+<section class="grid gap-6 px-6 pb-14 md:grid-cols-2 lg:grid-cols-3 lg:px-20"><article class="overflow-hidden rounded-2xl bg-white shadow-lg"><div class="relative"><img src="images/projets/easy-pointme.jpg" alt="Easy PointMe" class="h-52 w-full object-cover"><span class="absolute right-4 top-4 text-sm font-bold text-white">FREE</span></div>
+<div class="p-5"><p class="text-xs font-semibold text-orange-fonce">Design</p>
+<div class="mt-2 flex items-start justify-between gap-3"><h3 class="font-semibold text-slate-900">Easy PointMe</h3><a href="#" aria-label="Ouvrir le projet" class="text-slate-700"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+<p class="mt-1 text-sm text-gray-500">L'application permet de digitaliser le suivi des présences en assurant...</p>
+<p class="mt-3 border-b pb-2 text-xs text-gray-400">Publié il y a 1 an(s)</p>
+<div class="mt-3 flex items-center justify-between"><div class="flex items-center gap-3"><span class="grid size-10 place-items-center rounded-full bg-orange-fonce font-semibold text-white">S</span><div class="text-xs text-gray-500"><strong class="block text-sm text-slate-900">Super Admin</strong>Rôle non spécifié</div></div>
+<p class="font-bold text-orange-fonce">0.00 <small>FCFA</small></p></div></div></article></section>
+</main>
+<footer class="bg-slate-900 px-6 py-10 text-sm text-gray-300 lg:px-20">
+<div class="grid gap-8 md:grid-cols-2">
+<div><a href="index.html" class="mb-3 flex items-center gap-2 text-lg text-white"><i class="fa-solid fa-spinner text-orange-fonce"></i><span>Bakeli Work</span></a>
+<p class="max-w-md leading-relaxed">Bakeli Work est un service mis en place par Bakeli pour accompagner les entrepreneurs dans l'accès à des services digitaux (conception de logos, affiches, sites web et applications) à des prix très compétitifs et avec une grande flexibilité. Seuls les Bakelistes sont habilités à postuler pour réaliser ces prestations.</p></div>
+<div class="space-y-2"><h3 class="font-semibold text-white">Nous contacter</h3>
+<p>Hlm Grand Yoff Villa n°241 Près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</p>
+<p>TEL : <a href="tel:+221785461515" class="hover:text-orange">+221 78 546 15 51</a></p>
+<p>MAIL : <a href="mailto:contact@bakeli.tech" class="hover:text-orange">contact@bakeli.tech</a></p></div></div>
+<p class="mt-8 border-t border-white/10 pt-5 text-center">© Copyright <strong>Bakeli 2025.</strong> Tous droits réservés.</p></footer>
+</body>
+</html>

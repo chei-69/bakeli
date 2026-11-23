@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakeli Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#">
+            <i class="fa-solid fa-spinner"></i>
+            <span>Bakeli Work</span>
+        </a>
+
+        <nav class="navbar" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#" class="actif">Accueil</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Offres d'emploi</a></li>
+                <li><a href="#">Bakeli Radar</a></li>
+                <li class="menu">
+                    <button type="button" id="btn-explorer" aria-expanded="false" aria-controls="panneau">
+                        Explorer <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="panneau" id="panneau">
+                        <a href="#">Entreprises</a>
+                        <a href="#">Etablissements</a>
+                        <a href="#">Templates</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <button type="button" class="btn-login">Se connecter</button>
+    </header>
+
+    <main class="hero">
+        <section class="desc">
+            <h1>
+                <strong>Recrutez</strong>
+                <span class="leger">Facilement ,</span>
+                <span class="leger">collaborez <strong>efficacement</strong></span>
+            </h1>
+
+            <p class="intro">
+                Trouvez rapidement les talents dont vous avez besoin et permettez aux étudiants
+                de travailler sur des projets réels, partout et à tout moment, grâce à notre
+                plateforme de recrutement complète.
+            </p>
+
+            <div class="actions">
+                <a href="#" class="btn btn-plein">Trouver du travail</a>
+                <a href="#" class="btn btn-contour">Rejoindre un projet</a>
+            </div>
+
+            <div class="chiffres">
+                <div class="avatars">
+                    <img src="images/image3.png" alt="Étudiant Bakeli">
+                    <img src="images/image2.png" alt="Étudiant Bakeli">
+                    <img src="images/image1_bakeli.png" alt="Étudiant Bakeli">
+                </div>
+                <p class="stat"><strong>5 890+</strong> Etudiants</p>
+                <p class="stat">
+                    <i class="fa-solid fa-briefcase icone-projet"></i>
+                    <span><strong>97</strong> Projets</span>
+                </p>
+                <p class="stat">
+                    <i class="fa-regular fa-lightbulb icone-idee"></i>
+                    <span><strong>48</strong> Créativités</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="visuel" aria-label="Chiffres clés">
+            <span class="cercle-contour"></span>
+            <span class="cercle-ondes"></span>
+            <span class="point"></span>
+
+            <div class="cercle-photo">
+                <img src="images/image_bakeli.jpeg" alt="Étudiant de Bakeli">
+            </div>
+
+            <div class="carte carte-offres">
+                <div class="anneau"></div>
+                <strong>205</strong>
+                <span>Offres Emploi</span>
+            </div>
+
+            <div class="carte carte-projets">
+                <i class="fa-regular fa-file-lines"></i>
+                <div>
+                    <strong>97</strong>
+                    <span>Projets réalisés</span>
+                </div>
+            </div>
+
+            <div class="carte carte-etudiants">
+                <i class="fa-regular fa-file-lines"></i>
+                <div>
+                    <strong>5890+</strong>
+                    <span>Etudiants</span>
+                </div>
+            </div>
+        </section>
+       <section class="why">
+    <h2 class="why__title">Pourquoi nous choisir ?</h2>
+
+    <div class="carousel">
+        <div class="track" id="track">
+
+            <!-- Groupe 1 -->
+            <div class="slide">
+                <div class="cards">
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3 class="card__title">Stages garantis</h3>
+                        </div>
+                        <p class="card__text">Accédez à des opportunités de stages gratuite dans des startups innovante</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <h3 class="card__title">Projets concrets</h3>
+                        </div>
+                        <p class="card__text">Travaillez sur de vrais projets qui impactent des milliers professionnelles</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-solid fa-user-group"></i></div>
+                            <h3 class="card__title">Talents pré-qualifiés</h3>
+                        </div>
+                        <p class="card__text">Accédez à plus de 1000 étudiants talentueux, évalués par nos experts</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Groupe 2 -->
+            <div class="slide">
+                <div class="cards">
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-solid fa-award"></i></div>
+                            <h3 class="card__title">Certification reconnue</h3>
+                        </div>
+                        <p class="card__text">Obtenez des certifications valorisées par les employeur.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-regular fa-clock"></i></div>
+                            <h3 class="card__title">Recrutement rapide</h3>
+                        </div>
+                        <p class="card__text">Trouvez votre équipe en moins de 48h grâce à notre processus de matching intelligent</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__head">
+                            <div class="card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3 class="card__title">Garantie qualité</h3>
+                        </div>
+                        <p class="card__text">Satisfaction garantie ou remboursé. Nos talents sont accompagnés tout au long du projet</p>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Les points sont créés automatiquement par le JavaScript -->
+    <div class="dots" id="dots"></div>
+</section>
+<section class="opportunite">
+    <div class="opportunite__haut">
+        <img class="opportunite__image" src="images/image4.jpg" alt="Une étudiante présente un projet à son équipe">
+
+        <div class="opportunite__texte">
+            <p class="opportunite__cible">Entreprises, Entrepreneurs</p>
+            <span class="opportunite__trait"></span>
+
+            <h2 class="opportunite__titre">
+                Partagez votre opportunité,<br>
+                découvrez le talent de demain
+            </h2>
+
+            <p class="opportunite__desc">
+                Soumettez une offre d'emploi ou un projet et laissez nos étudiants qualifiés
+                apporter leurs idées et compétences pour faire grandir votre initiative.
+            </p>
+
+            <a href="#" class="btn-projet">Soumettez un projet</a>
+        </div>
+    </div>
+
+    <div class="chiffres-cles">
+        <div class="chiffre-cle">
+            <strong>12k+</strong>
+            <h3>Étudiants</h3>
+            <p>Étudiants talentueux disponibles sur notre plateforme</p>
+        </div>
+
+        <div class="chiffre-cle">
+            <strong>20k+</strong>
+            <h3>Concours ou challenges étudiants</h3>
+            <p>Mettre les talents à l'épreuve avec des mini-projets.</p>
+        </div>
+
+        <div class="chiffre-cle">
+            <strong>18k+</strong>
+            <h3>Ateliers pratiques</h3>
+            <p>Pour partager le savoir-faire et détecter de futurs talents.</p>
+        </div>
+    </div>
+</section>
+<section class="opportunite">
+    <div class="opportunite__haut">
+        <div class="opportunite__texte">
+            <p class="opportunite__cible">Étudiants</p>
+            <span class="opportunite__trait"></span>
+
+            <h2 class="opportunite__titre">
+                Travaillez sur des projets réels et<br>
+                trouvez des stages et opportunités
+            </h2>
+
+            <p class="opportunite__desc">
+                Développez vos compétences en participant à des missions concrètes et accédez
+                facilement à des offres adaptées à votre profil.
+            </p>
+
+            <div class="opportunite__actions">
+                <a href="#" class="btn-projet">Trouver du travail</a>
+                <a href="#" class="btn-projet btn-projet--contour">Participer à un projet</a>
+            </div>
+        </div>
+
+        <img class="opportunite__image" src="images/image5.jpg" alt="Deux étudiants travaillent sur des documents autour d'une table">
+    </div>
+
+    <div class="chiffres-cles">
+        <div class="chiffre-cle">
+            <strong>19k+</strong>
+            <h3>Offres</h3>
+            <p>Trouvez facilement des stages et opportunités</p>
+        </div>
+
+        <div class="chiffre-cle">
+            <strong>10k+</strong>
+            <h3>Projets réels</h3>
+            <p>Participez à des missions réelles proposées par des entrepreneurs et entreprises.</p>
+        </div>
+
+        <div class="chiffre-cle">
+            <strong>20+</strong>
+            <h3>Étudiants recrutés</h3>
+            <p>20+ étudiants ont trouvé des opportunités réelles via notre plateforme.</p>
+        </div>
+    </div>
+</section>
+<section class="projets">
+    <div class="projets__entete">
+        <p class="projets__etiquette">Projets</p>
+        <h2 class="projets__titre">Découvrez les dernières <span>opportunités</span></h2>
+    </div>
+
+    <div class="projets__lien">
+        <a href="#">Tout afficher</a>
+    </div>
+
+    <div class="projets__grille">
+        <!-- tes 3 cartes de projets -->
+    </div>
+</section>
+<section class="temoins">
+    <h2 class="temoins__titre">
+        Ils ont choisi Bakeli<br>
+        pour grandir,<br>
+        collaborer et réussir.
+    </h2>
+
+    <div class="temoins__carte">
+        <img class="temoins__monde" src="images/carte-monde.png" alt="">
+
+        <article class="temoin temoin--1">
+            <img class="temoin__photo" src="images/avatar1.jpg" alt="Ndeye Awa NDIAYE">
+            <strong>Ndeye Awa NDIAYE</strong>
+            <span>Développeuse Fullstack</span>
+            <div class="etoiles" aria-label="4 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star vide"></i>
+            </div>
+        </article>
+
+        <article class="temoin temoin--2">
+            <img class="temoin__photo" src="images/avatar2.jpg" alt="Mbaye SECK">
+            <strong>Mbaye SECK</strong>
+            <span>Développeur Fullstack</span>
+            <div class="etoiles" aria-label="4 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star vide"></i>
+            </div>
+        </article>
+
+        <article class="temoin temoin--3">
+            <img class="temoin__photo" src="images/avatar3.jpg" alt="Gambie DIALLO">
+            <strong>Gambie DIALLO</strong>
+            <span>UI/UX designer</span>
+            <div class="etoiles" aria-label="4 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star vide"></i>
+            </div>
+        </article>
+
+        <article class="temoin temoin--4">
+            <img class="temoin__photo" src="images/avatar4.jpg" alt="Sokhna Fatou Gueye">
+            <strong>Sokhna Fatou Gueye</strong>
+            <span>Devops</span>
+            <div class="etoiles" aria-label="4 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star vide"></i>
+            </div>
+        </article>
+
+        <article class="temoin temoin--5">
+            <img class="temoin__photo" src="images/avatar5.jpg" alt="Mourtalla SYLL">
+            <strong>Mourtalla SYLL</strong>
+            <span>Développeur Fullstack</span>
+            <div class="etoiles" aria-label="4 étoiles sur 5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star vide"></i>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="avis">
+    <div class="avis__gauche">
+        <h2 class="avis__titre">Ce que disent nos Étudiants ?</h2>
+        <div class="avis__points" id="avis-points"></div>
+    </div>
+
+    <div class="avis__scene">
+        <div class="avis__pile">
+
+            <article class="avis__carte">
+                <img class="avis__photo" src="images/etudiant1.jpg" alt="Aminata Fall">
+                <p class="avis__texte">"Grâce à Bakeli, j'ai décroché mon premier stage en développement web."</p>
+                <h3 class="avis__nom">Aminata Fall</h3>
+                <p class="avis__role">Étudiante en développement web</p>
+            </article>
+
+            <article class="avis__carte">
+                <img class="avis__photo" src="images/etudiant2.jpg" alt="Kwame Asante">
+                <p class="avis__texte">"Bakeli m'a offert les outils et le réseau pour lancer ma carrière en design. Je recommande vivement !"</p>
+                <h3 class="avis__nom">Kwame Asante</h3>
+                <p class="avis__role">Étudiant en informatique</p>
+            </article>
+
+            <article class="avis__carte">
+                <img class="avis__photo" src="images/etudiant3.jpg" alt="Fatou Ndiaye">
+                <p class="avis__texte">"Les projets concrets m'ont permis de montrer mes compétences et de gagner du temps dans ma recherche."</p>
+                <h3 class="avis__nom">Fatou Ndiaye</h3>
+                <p class="avis__role">Étudiante en marketing digital</p>
+            </article>
+
+            <article class="avis__carte">
+                <img class="avis__photo" src="images/etudiant4.jpg" alt="Moussa Ba">
+                <p class="avis__texte">"Une plateforme simple, des entreprises sérieuses et un vrai accompagnement."</p>
+                <h3 class="avis__nom">Moussa Ba</h3>
+                <p class="avis__role">Étudiant en réseaux</p>
+            </article>
+
+        </div>
+
+        <div class="avis__fleches">
+            <button type="button" id="avis-haut" aria-label="Témoignage précédent"><i class="fa-solid fa-chevron-up"></i></button>
+            <button type="button" id="avis-bas" aria-label="Témoignage suivant"><i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+    </div>
+</section>
+    </main>
+<footer class="pied">
+    <div class="pied__haut">
+        <div class="pied__presentation">
+            <a class="pied__logo" href="#">
+                <i class="fa-solid fa-spinner"></i>
+                <span>Bakeli Work</span>
+            </a>
+            <p>
+                Bakeli Work est un service mis en place par Bakeli pour accompagner les
+                entrepreneurs dans l'accès à des services digitaux (conception de logos,
+                affiches, sites web et applications) à des prix très compétitifs et avec
+                une grande flexibilité. Seuls les Bakelistes sont habilités à postuler
+                pour réaliser ces prestations.
+            </p>
+        </div>
+
+        <div class="pied__contact">
+            <h3>Nous contacter</h3>
+            <p>Hlm Grand Yoff Villa n°241 Près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</p>
+            <p>TEL : <a href="tel:+221785461515">+221 78 546 15 51</a></p>
+            <p>MAIL : <a href="mailto:contact@bakeli.tech">contact@bakeli.tech</a></p>
+        </div>
+    </div>
+
+    <p class="pied__copyright">
+        © Copyright <strong>Bakeli 2025.</strong> Tous droits réservés.
+    </p>
+</footer>
+
+    <script>
+        const btnExplorer = document.getElementById('btn-explorer');
+        const panneau = document.getElementById('panneau');
+
+        function fermer() {
+            panneau.classList.remove('ouvert');
+            btnExplorer.setAttribute('aria-expanded', 'false');
+        }
+
+        btnExplorer.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const ouvert = panneau.classList.toggle('ouvert');
+            btnExplorer.setAttribute('aria-expanded', ouvert);
+        });
+
+        document.addEventListener('click', fermer);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') fermer();
+        });
+    </script>
+</body>
+</html>
