@@ -1,288 +1,402 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bourses Volkeno | Bakeli School of Technology</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/bourses.css">
-</head>
-<body>
+  <title>Détails de la Bourse Volkeno | Bakeli</title>
 
  
-  <header class="header">
-    <a href="index.html" class="header__logo">
-      <img src="images/logo.png" alt="Bakeli School of Technology">
-    </a>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a href="index.html">Accueil</a></li>
-        <li class="nav__dropdown">
-          <a href="#">Formations</a>
-          <ul class="nav__submenu">
-            <li><a href="formations-certifiantes.html">Formations Certifiantes</a></li>
-            <li><a href="formations-diplomantes.html">Formations Diplômantes</a></li>
-            <li><a href="https://learning.bakeli.tech">Bakeli Learning</a></li>
-          </ul>
-        </li>
-        <li class="nav__dropdown">
-          <a href="#">Insertion</a>
-          <ul class="nav__submenu">
-            <li><a href="https://work.bakeli.tech">Bakeli Work</a></li>
-          </ul>
-        </li>
-        <li><a href="coachs.html">Coachs</a></li>
-        <li><a href="evenements.html">Événements</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="bourses.html">Bourses</a></li>
-      </ul>
-    </nav>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bakeli: { orange: '#FF9800', dark: '#1F2937', soft: '#FFF4E0' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
 
-    <div class="header__actions">
-      <a href="https://api.whatsapp.com/send?phone=221783013838" class="btn btn--outline">Contacter Bakeli</a>
-      <a href="inscription.html" class="btn btn--primary">S'inscrire</a>
+
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between py-3">
+
+      <a href="index.html" class="shrink-0">
+        <img src="images/logo.png" alt="Bakeli School of Technology" class="h-10 w-auto">
+      </a>
+
+     
+      <nav class="hidden lg:block" aria-label="Menu principal">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Formations <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <li>
+              <a href="formations-certifiantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Formations Certifiantes</span>
+                <span class="block text-sm text-gray-500">Formations de 6 à 12 mois, certificat professionnel</span>
+              </a>
+            </li>
+            <li>
+              <a href="formations-diplomantes.html" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Formations Diplômantes</span>
+                <span class="block text-sm text-gray-500">Formations de 24 mois, diplôme de Technicien Supérieur</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learning.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Bakeli Learning</span>
+                <span class="block text-sm text-gray-500">Apprenez, progressez et certifiez-vous sans rien payer</span>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li class="group relative py-2">
+            <a href="#" class="hover:text-bakeli-orange">Insertion <span class="text-xs">&#9662;</span></a>
+            <ul class="invisible absolute left-0 top-full w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <li>
+              <a href="https://work.bakeli.tech" class="block px-5 py-3 hover:bg-bakeli-soft">
+                <span class="block font-semibold text-bakeli-dark">Bakeli Work</span>
+                <span class="block text-sm text-gray-500">Collabore et trouve des missions facilement</span>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li><a href="coachs.html" class="hover:text-bakeli-orange">Coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+          <li><a href="bourses.html" class="text-bakeli-orange">Bourses</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white hidden lg:inline-flex">Contacter Bakeli</a>
+        <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600 hidden lg:inline-flex">S'inscrire</a>
+
+        
+        <details class="relative lg:hidden">
+          <summary class="cursor-pointer list-none rounded-md border border-gray-300 px-3 py-2 text-xl leading-none [&::-webkit-details-marker]:hidden">&#9776;</summary>
+          <div class="absolute right-0 top-full mt-3 w-72 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5">
+            <ul class="space-y-3 font-medium">
+              <li><a href="index.html">Accueil</a></li>
+              <li>Formations</li>
+          <li><a href="formations-certifiantes.html" class="block py-1 pl-4 text-gray-600">Formations Certifiantes</a></li>
+          <li><a href="formations-diplomantes.html" class="block py-1 pl-4 text-gray-600">Formations Diplômantes</a></li>
+          <li><a href="https://learning.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Learning</a></li>
+          <li><a href="https://work.bakeli.tech" class="block py-1 pl-4 text-gray-600">Bakeli Work</a></li>
+              <li><a href="coachs.html">Coachs</a></li>
+              <li><a href="evenements.html">Événements</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="bourses.html">Bourses</a></li>
+            </ul>
+            <div class="mt-5 flex flex-col gap-3">
+              <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-5 py-2 text-sm font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Contacter Bakeli</a>
+              <a href="inscription.html" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-600">S'inscrire</a>
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
   </header>
 
   <main>
 
-    <section class="hero">
-      <div class="hero__content">
-        <p class="hero__tag">Bourses Volkeno × Bakeli</p>
-        <h1 class="hero__title">Formations éligibles aux bourses</h1>
-        <p class="hero__text">
-          Choisissez parmi nos 6 parcours professionnalisants de 6 mois.
-          Chaque formation bénéficie de 25 bourses Volkeno couvrant 70 % des frais.
-        </p>
+    
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
+        <div>
+          <p class="inline-block rounded-full bg-bakeli-soft px-4 py-1 text-sm font-semibold text-bakeli-orange">Bourses Volkeno × Bakeli</p>
+          <h1 class="mt-4 text-4xl font-extrabold leading-tight text-bakeli-dark md:text-5xl">Formations éligibles aux bourses</h1>
+          <p class="mt-6 text-lg leading-relaxed text-gray-600">
+            Choisissez parmi nos 6 parcours professionnalisants de 6 mois.
+            Chaque formation bénéficie de 25 bourses Volkeno couvrant 70 % des frais.
+          </p>
 
-        <div class="hero__chiffres">
-          <div><strong>6 mois</strong><span>Durée</span></div>
-          <div><strong>25</strong><span>Bourses / filière</span></div>
-          <div><strong>150</strong><span>Bourses totales</span></div>
+          <dl class="mt-8 grid max-w-sm grid-cols-2 gap-4">
+            <div class="rounded-xl bg-bakeli-soft p-4"><dt class="text-sm text-gray-600">Durée</dt><dd class="text-2xl font-extrabold text-bakeli-dark">6 mois</dd></div>
+            <div class="rounded-xl bg-bakeli-soft p-4"><dt class="text-sm text-gray-600">Bourses / filière</dt><dd class="text-2xl font-extrabold text-bakeli-dark">25</dd></div>
+          </dl>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            
+            <div class="group relative">
+              <button type="button" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Choisir mon programme <span class="ml-2 text-xs">&#9662;</span></button>
+              <ul class="invisible absolute left-0 top-full z-20 w-72 rounded-xl bg-white py-2 opacity-0 shadow-xl ring-1 ring-black/5 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <li><a href="#parcours-analyse" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Analyse des données &amp; IA</a></li>
+          <li><a href="#parcours-web-mobile" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Développement Web &amp; Mobile</a></li>
+          <li><a href="#parcours-backend" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Développement Backend</a></li>
+          <li><a href="#parcours-community" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Community Management</a></li>
+          <li><a href="#parcours-gestion" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Informatique de Gestion</a></li>
+          <li><a href="#parcours-design" class="block px-5 py-3 text-sm font-medium hover:bg-bakeli-soft">Design Graphique &amp; Audiovisuel</a></li>
+              </ul>
+            </div>
+            <a href="#formations-section" class="inline-flex items-center justify-center rounded-full border-2 border-bakeli-orange px-6 py-3 font-semibold text-bakeli-orange transition hover:bg-bakeli-orange hover:text-white">Découvrir les formations</a>
+          </div>
         </div>
 
-        <a href="#formations-section" class="btn btn--primary">Découvrir les formations</a>
-      </div>
-
-      <div class="hero__image">
-        <img src="images/imagebourse2.png" alt="Étudiant heureux">
-      </div>
-    </section>
-
-    <section class="infos">
-      <h2 class="section__title">Saisissez votre chance !</h2>      
-    <p class="section__sous-titre">
-        Cette initiative vise à rendre les compétences numériques accessibles
-        à tous les jeunes motivés du Sénégal.
-      </p>
-
-      <div class="infos__grille">
-        <article class="infos__carte">
-          <h3>Qui peut postuler ?</h3>
-          <p>Jeunes de 18 à 35 ans, résidant au Sénégal, passionnés par le numérique.</p>
-        </article>
-        <article class="infos__carte">
-          <h3>Combien de bourses ?</h3>
-          <p>150 bourses au total, soit 25 bourses par filière de formation.</p>
-        </article>
-        <article class="infos__carte">
-          <h3>Conditions</h3>
-          <p>Disponibilité à temps plein, motivation et 150 000 FCFA de participation.</p>
-        </article>
-      </div>
-
-      <a href="#formations-section" class="btn btn--primary">Voir programme</a>
-    </section>
-
-    <section class="parcours" id="formations-section">
-      <p class="hero__tag">Formations éligibles</p>
-      <h2 class="section__title">Choisissez parmi 6 parcours professionnalisants</h2>
-      <p class="section__sous-titre">
-        Conçus pour répondre aux besoins du marché. Chaque programme est axé sur la pratique,
-        avec des projets concrets et un accompagnement personnalisé.
-      </p>
-
-      <div class="parcours__grille">
-
-        <article class="parcours__carte">
-          <h3>Analyse des données &amp; IA</h3>
-          <p>Apprenez à exploiter les données pour prendre des décisions stratégiques et développer des modèles prédictifs.</p>
-          <p class="parcours__meta">Durée : 24 semaines · Bourses : 25 disponibles</p>
-          <ul class="parcours__outils"><li>Python</li><li>NLP</li><li>RPA</li><li>ML</li><li>API</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
-        <article class="parcours__carte">
-          <h3>Développement Web &amp; Mobile</h3>
-          <p>Développez vos soft skills et intégrez le monde professionnel avec confiance.</p>
-          <p class="parcours__meta">Durée : 104 semaines · Bourses : 30 disponibles</p>
-          <ul class="parcours__outils"><li>HTML 5</li><li>CSS 3</li><li>JavaScript</li><li>Git</li><li>GitHub</li><li>React JS</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
-        <article class="parcours__carte">
-          <h3>Développement Backend</h3>
-          <p>Maîtrisez la conception et la sécurisation d'APIs avec Node.js, Express et MongoDB.</p>
-          <p class="parcours__meta">Durée : 24 semaines · Bourses : 25 disponibles</p>
-          <ul class="parcours__outils"><li>JS</li><li>NodeJS</li><li>Git</li><li>GitHub</li><li>NPM</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
-        <article class="parcours__carte">
-          <h3>Community Management</h3>
-          <p>Gérez des marques, créez des contenus engageants et lancez des campagnes performantes.</p>
-          <p class="parcours__meta">Durée : 24 semaines · Bourses : 25 disponibles</p>
-          <ul class="parcours__outils"><li>Gestion de communautés</li><li>Création de contenus</li><li>Campagne marketing</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
-        <article class="parcours__carte">
-          <h3>Informatique de Gestion</h3>
-          <p>Comprenez le rôle des systèmes d'information et maîtrisez les outils informatiques et bureautiques professionnels.</p>
-          <p class="parcours__meta">Durée : 104 semaines · Bourses : 30 disponibles</p>
-          <ul class="parcours__outils"><li>Excel</li><li>Power BI</li><li>MySQL</li><li>Python</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
-        <article class="parcours__carte">
-          <h3>Design Graphique &amp; Audiovisuel</h3>
-          <p>Concevez des visuels puissants et des vidéos captivantes avec Photoshop, Illustrator et Premiere Pro.</p>
-          <p class="parcours__meta">Durée : 24 semaines · Bourses : 25 disponibles</p>
-          <ul class="parcours__outils"><li>Photoshop</li><li>Illustrator</li><li>Premiere Pro</li></ul>
-          <a href="#" class="btn btn--outline">En savoir plus</a>
-        </article>
-
+        <div class="relative mx-auto w-full max-w-md">
+          <img src="images/imagebourse2.png" alt="Étudiante souriante avec un sac à dos et un casque audio" class="w-full">
+          <span class="absolute rounded-xl bg-white px-4 py-2 text-sm font-semibold shadow-lg left-0 top-8">Développement <span class="text-bakeli-orange">Web/Mobile</span></span>
+          <span class="absolute rounded-xl bg-white px-4 py-2 text-sm font-semibold shadow-lg right-0 top-1/3">Data &amp; IA <span class="text-bakeli-orange">Analyse</span></span>
+          <span class="absolute rounded-xl bg-white px-4 py-2 text-sm font-semibold shadow-lg bottom-24 left-0">Design <span class="text-bakeli-orange">Graphique</span></span>
+          <span class="absolute bottom-6 right-0 rounded-xl bg-bakeli-orange px-4 py-2 text-sm font-semibold text-white shadow-lg"><span class="text-xl font-extrabold">150</span> Bourses totales</span>
+        </div>
       </div>
     </section>
 
     
-    <section class="stage">
-      <h2 class="section__title">Stage inclus pour les meilleurs profils</h2>
-      <p class="section__sous-titre">
-        Entre 50 et 60 % des étudiants sélectionnés bénéficieront d'un stage de 3 mois
-        dans une entreprise partenaire du Groupe Volkeno.
-      </p>
-
-      <div class="stage__grille">
-        <article class="stage__bloc">
-          <h3>Missions réelles en entreprise</h3>
-          <p>Travaillez sur de vrais projets avec impact.</p>
-        </article>
-        <article class="stage__bloc">
-          <h3>Coaching et suivi de terrain</h3>
-          <p>Accompagnement personnalisé tout au long du stage.</p>
-        </article>
-        <article class="stage__bloc">
-          <h3>Opportunités d'embauche</h3>
-          <p>Possibilité de CDI dans l'entreprise d'accueil.</p>
-        </article>
+    <section class="bg-bakeli-soft py-16">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 text-center">
+        <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Information du bourse</p>
+        <h2 class="mt-2 text-3xl font-extrabold text-bakeli-dark">Saisissez votre chance !</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">Cette initiative vise à rendre les compétences numériques accessibles à tous les jeunes motivés du Sénégal.</p>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 mt-10 grid gap-6 text-left md:grid-cols-3">
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Qui peut postuler ?</h3><p class="mt-2 text-gray-600">Jeunes de 18–35 ans, résidant au Sénégal, passionnés par le numérique</p></article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Combien de bourses ?</h3><p class="mt-2 text-gray-600">150 bourses au total, soit 25 bourses par filière de formation</p></article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Conditions</h3><p class="mt-2 text-gray-600">Disponibilité temps plein, motivation et 150 000 FCFA de participation</p></article>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="#formations-section" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Voir programme</a>
       </div>
     </section>
 
     
-    <section class="postuler">
-      <p class="hero__tag">Processus simple</p>
-      <h2 class="section__title">Comment postuler ?</h2>
-      <p class="section__sous-titre">4 étapes simples pour rejoindre l'aventure Bakeli</p>
+    <section id="formations-section" class="mx-auto max-w-7xl px-4 lg:px-8 scroll-mt-24 py-16">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Formations éligibles</p>
+        <h2 class="mt-2 text-3xl font-extrabold text-bakeli-dark">Choisissez parmi 6 parcours professionnalisants</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">Conçus pour répondre aux besoins du marché. Chaque programme est axé sur la pratique, avec des projets concrets et un accompagnement personnalisé.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article id="parcours-analyse" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Analyse des données &amp; IA</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Entrez dans l'univers fascinant de la data. Apprenez à exploiter les données pour prendre des décisions stratégiques et développer des modèles prédictifs.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 24 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 25 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Python</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">NLP</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">RPA</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">ML</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">API</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article id="parcours-web-mobile" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Développement Web &amp; Mobile</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Développez vos soft skills, et intégrez le monde professionnel avec confiance.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 104 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 30 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">HTML 5</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">CSS 3</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">JavaScript</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Git</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Github</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">PWA</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">VS Code</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">React JS</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article id="parcours-backend" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Développement Backend</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Maîtrisez la conception et la sécurisation d'APIs en JavaScript avec Node.js, Express, MongoDB et les outils modernes de test et de déploiement. Apprenez à structurer des architectures solides, gérer les bases de données et sécuriser vos applications.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 24 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 25 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">JS</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">NodeJS</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Github</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Git</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">VsCode</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">NPM</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article id="parcours-community" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Community Management</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Maîtrisez les outils et stratégies pour gérer des marques, créer des contenus engageants, lancer des campagnes performantes et piloter la relation client sur les réseaux sociaux. Apprenez à bâtir une présence digitale percutante, avec des projets concrets et des outils pro.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 24 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 25 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Gestion de communautés</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Analyse des réseaux</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Site &amp; blog</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Création de contenus</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Campagne marketing</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article id="parcours-gestion" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Informatique de Gestion</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Comprendre le rôle des systèmes d'information dans une entreprise. Maîtriser les outils informatiques et bureautiques professionnels.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 104 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 30 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Microsoft Excel et Google Sheets</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Microsoft Access, MySQL et PostgreSQL</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Google Drive, Google Docs et Google Forms</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Power BI ou un outil de visualisation de données</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Outils de gestion de projet et de travail collaboratif</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Python pour l'automatisation et l'analyse de données</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Environnements de développement et outils de gestion de versions</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Outils de modélisation des processus et des bases de données</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Outils de sauvegarde, de sécurité et de documentation</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+        <article id="parcours-design" class="flex scroll-mt-24 flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-xl font-bold text-bakeli-dark">Design Graphique &amp; Audiovisuel</h3>
+          <p class="mt-3 text-sm leading-relaxed text-gray-600">Apprenez à concevoir des visuels puissants et des vidéos captivantes grâce à la Suite Adobe : Photoshop, Illustrator &amp; Premiere Pro. De la culture visuelle à la présentation de projets clients, ce parcours vous prépare aux métiers du design graphique et du montage vidéo.</p>
+          <p class="mt-4 text-sm"><span class="font-semibold text-bakeli-dark">Durée :</span> 24 semaines
+            <span class="mx-1 text-gray-300">|</span>
+            <span class="font-semibold text-bakeli-dark">Bourses :</span> 25 disponibles</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Photoshop</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Adobe Illustrator</li>
+            <li class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">Premiere Pro</li>
+          </ul>
+          <a href="#" class="mt-auto pt-6 font-semibold text-bakeli-orange hover:underline">En savoir plus &rarr;</a>
+        </article>
+      </div>
+    </section>
 
-      <ol class="postuler__etapes">
-        <li>
-          <span class="postuler__numero">1</span>
-          <h3>Choisissez votre programme</h3>
-          <p>Sélectionnez la formation qui correspond à vos ambitions.</p>
+   
+    <section class="bg-bakeli-soft py-16">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8 text-center">
+        <h2 class="text-3xl font-extrabold text-bakeli-dark">Stage inclus pour les meilleurs profils</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">Entre 50 à 60% des étudiants sélectionnés bénéficieront d'un stage de 3 mois dans une entreprise partenaire du Groupe Volkeno</p>
+        <div class="mt-10 grid gap-6 text-left md:grid-cols-3">
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Missions réelles en entreprise</h3><p class="mt-2 text-gray-600">Travaillez sur de vrais projets avec impact</p></article>
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Coaching et suivi de terrain</h3><p class="mt-2 text-gray-600">Accompagnement personnalisé tout au long du stage</p></article>
+        <article class="rounded-2xl bg-white p-6 shadow-sm"><h3 class="text-lg font-bold text-bakeli-dark">Opportunités d'embauche</h3><p class="mt-2 text-gray-600">Possibilité de CDI dans l'entreprise d'accueil</p></article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mx-auto max-w-7xl px-4 lg:px-8 py-16 text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-bakeli-orange">Processus simple</p>
+      <h2 class="mt-2 text-3xl font-extrabold text-bakeli-dark">Comment postuler ?</h2>
+      <p class="mt-4 text-gray-600">4 étapes simples pour rejoindre l'aventure Bakeli</p>
+      <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm text-center">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-bakeli-orange text-xl font-bold text-white">1</span>
+          <h3 class="mt-4 text-lg font-bold text-bakeli-dark">Choisissez votre programme</h3>
+          <p class="mt-2 text-sm text-gray-600">Sélectionnez la formation qui correspond à vos ambitions</p>
         </li>
-        <li>
-          <span class="postuler__numero">2</span>
-          <h3>Participez à un test d'évaluation</h3>
-          <p>Pour mesurer votre motivation et vos compétences de base.</p>
+        <li class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm text-center">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-bakeli-orange text-xl font-bold text-white">2</span>
+          <h3 class="mt-4 text-lg font-bold text-bakeli-dark">Participez à un test d'évaluation</h3>
+          <p class="mt-2 text-sm text-gray-600">Pour mesurer votre motivation et vos compétences de base</p>
         </li>
-        <li>
-          <span class="postuler__numero">3</span>
-          <h3>Entretien individuel</h3>
-          <p>Pour mieux comprendre votre projet professionnel.</p>
+        <li class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm text-center">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-bakeli-orange text-xl font-bold text-white">3</span>
+          <h3 class="mt-4 text-lg font-bold text-bakeli-dark">Entretien individuel</h3>
+          <p class="mt-2 text-sm text-gray-600">Pour mieux comprendre votre projet professionnel</p>
         </li>
-        <li>
-          <span class="postuler__numero">4</span>
-          <h3>Finaliser l'inscription</h3>
-          <p>Finalisez votre inscription en payant la première tranche.</p>
+        <li class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm text-center">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-bakeli-orange text-xl font-bold text-white">4</span>
+          <h3 class="mt-4 text-lg font-bold text-bakeli-dark">Finaliser l'inscription</h3>
+          <p class="mt-2 text-sm text-gray-600">Finalisez votre inscription en payant la première tranche</p>
         </li>
       </ol>
-
-      <p class="postuler__date">Les candidatures sont ouvertes jusqu'au 31 décembre 2026</p>
-      <a href="#formations-section" class="btn btn--primary">Voir la liste des parcours</a>
+      <p class="mt-10 font-semibold text-bakeli-dark">Les candidatures sont ouvertes jusqu'au 31 Décembre 2026</p>
+      <div class="mt-6">
+        <a href="#formations-section" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Voir la liste des parcours</a>
+      </div>
     </section>
 
-    
-    <section class="details">
-      <h2 class="section__title">Détails de la bourse</h2>
-
-      <div class="details__colonnes">
-        <div class="details__bloc">
-          <h3>Financement</h3>
-          <ul>
-            <li>Montant couvert : 70 % des frais</li>
+  
+    <section class="bg-bakeli-soft py-16">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <h2 class="text-center text-3xl font-extrabold text-bakeli-dark">Détails de la bourse</h2>
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-bakeli-dark">Financement</h3>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-gray-600">
+            <li>Montant couvert : 70% des frais</li>
             <li>Coût restant : 150 000 FCFA</li>
             <li>Modalités : 3 tranches de 50 000 FCFA</li>
             <li>Bourses disponibles : 150 (25 par filière)</li>
-          </ul>
-        </div>
-
-        <div class="details__bloc">
-          <h3>Critères d'éligibilité</h3>
-          <ul>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm">
+            <h3 class="text-xl font-bold text-bakeli-dark">Critères d'éligibilité</h3>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-gray-600">
             <li>Être âgé de 18 à 35 ans</li>
             <li>Résider au Sénégal</li>
             <li>Fort intérêt pour le numérique</li>
             <li>Disponible à temps plein</li>
-          </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 text-center">
+          <a href="#formations-section" class="inline-flex items-center justify-center rounded-full bg-bakeli-orange px-6 py-3 font-semibold text-white transition hover:bg-orange-600">Voir la liste des parcours</a>
         </div>
       </div>
-
-      <a href="#formations-section" class="btn btn--primary">Voir la liste des parcours</a>
     </section>
 
   </main>
 
- 
-  <footer class="footer">
-    <div class="footer__colonne">
-      <img src="images/logo.png" alt="Bakeli" class="footer__logo">
-      <p>
-        Bakeli est une école de formation professionnelle dans les nouvelles technologies
-        créée par Volkeno. Elle a formé + de 6000 étudiants et professionnels aux métiers
-        des nouvelles technologies et du digital.
-      </p>
-      <ul class="footer__reseaux">
-        <li><a href="https://twitter.com/Bakeli_school">X</a></li>
-        <li><a href="https://www.facebook.com/bakeli.tech">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/bakelischool/">Instagram</a></li>
-      </ul>
+  
+  <footer class="bg-gray-100 text-gray-700">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
+
+      <div>
+        <img src="images/logo.png" alt="Bakeli" class="h-10 w-auto">
+        <p class="mt-4 text-sm leading-relaxed">
+          Bakeli est une école de formation professionnelle dans les nouvelles technologies créée par Volkeno.
+          Elle a formé + de 6000 étudiants et professionnels aux métiers des nouvelles technologies et du digital.
+        </p>
+        <ul class="mt-5 flex flex-wrap gap-2">
+          <li><a href="https://twitter.com/Bakeli_school" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">X</a></li>
+          <li><a href="https://www.facebook.com/bakeli.tech" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/bakelischool/" class="rounded-full border border-gray-300 px-3 py-1 text-sm hover:border-bakeli-orange hover:text-bakeli-orange">Instagram</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Bakeli</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
+          <li><a href="coachs.html" class="hover:text-bakeli-orange">Nos coachs</a></li>
+          <li><a href="evenements.html" class="hover:text-bakeli-orange">Événements</a></li>
+          <li><a href="blog.html" class="hover:text-bakeli-orange">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-bakeli-dark">Contacts</h4>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://maps.app.goo.gl/RHNCnfi2tzuHDP3G6" class="hover:text-bakeli-orange">Hlm Grand Yoff Villa n°241, près du terminus des bus Dakar Dem Dikk qui vont à l'AIBD</a></li>
+          <li><a href="tel:+221783013838" class="hover:text-bakeli-orange">+221 78 301 38 38</a></li>
+          <li><a href="mailto:contact@bakeli.tech" class="hover:text-bakeli-orange">contact@bakeli.tech</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="footer__colonne">
-      <h4>Bakeli</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="coachs.html">Nos coachs</a></li>
-        <li><a href="evenements.html">Événements</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__colonne">
-      <h4>Contacts</h4>
-      <ul>
-        <li>Hlm Grand Yoff Villa n°241, Dakar</li>
-        <li><a href="tel:+221783013838">+221 78 301 38 38</a></li>
-        <li><a href="mailto:contact@bakeli.tech">contact@bakeli.tech</a></li>
-      </ul>
-    </div>
-
-    <p class="footer__copy">© Copyright 2026, Tous droits réservés.</p>
+    <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
   </footer>
+
+  
+  <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
+    <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
+  </a>
 
 </body>
 </html>
