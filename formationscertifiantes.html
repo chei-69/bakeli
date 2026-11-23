@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formations Certifiantes | Bakeli School of Technology</title>
 
+  
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 
-
+  
   <script>
     tailwind.config = {
       theme: {
@@ -30,7 +31,7 @@
         <img src="images/logo.png" alt="Bakeli School of Technology" class="h-10 w-auto">
       </a>
 
-     
+      
       <nav class="hidden lg:block" aria-label="Menu principal">
         <ul class="flex items-center gap-8 font-medium">
           <li><a href="index.html" class="hover:text-bakeli-orange">Accueil</a></li>
@@ -107,7 +108,7 @@
 
   <main>
 
- 
+    
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 lg:px-8 grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
         <div>
@@ -145,6 +146,7 @@
       </ul>
     </section>
 
+    
     <section id="formations" class="mx-auto max-w-7xl px-4 lg:px-8 scroll-mt-24 py-14">
       <h2 class="text-center text-2xl font-bold text-bakeli-dark md:text-3xl">Dans quel domaine souhaitez-vous vous former ?</h2>
       <ul class="mt-6 flex flex-wrap justify-center gap-3">
@@ -420,6 +422,7 @@
 
   </main>
 
+  
   <footer class="bg-gray-100 text-gray-700">
     <div class="mx-auto max-w-7xl px-4 lg:px-8 grid gap-10 py-14 md:grid-cols-3">
 
@@ -460,207 +463,10 @@
     <p class="border-t border-gray-200 py-5 text-center text-sm">© Copyright 2026, Tous droits réservés.</p>
   </footer>
 
+  
   <a href="https://api.whatsapp.com/send?phone=221783013838&text=Bonjour%2C+je+cherche+%C3%A0+me+former+dans+la+tech+et+j%27aimerais+qu%27un+conseiller+m%27aide+%C3%A0+choisir+la+formation+adapt%C3%A9e+%C3%A0+mon+profil.+Merci+%21" class="fixed bottom-5 right-5 z-50 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-green-600">
     <span class="hidden sm:inline">Besoin d'aide ? Écrivez-nous sur </span>WhatsApp
   </a>
-<<<<<<< HEAD
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formations Certifiantes | Bakeli School of Technology</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/formations.css">
-</head>
-<body>
-
-
-  <header class="header">
-    <a href="index.html" class="header__logo">
-      <img src="images/logo.png" alt="Bakeli School of Technology">
-    </a>
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a href="index.html">Accueil</a></li>
-        <li class="nav__dropdown">
-          <a href="#">Formations</a>
-          <ul class="nav__submenu">
-            <li><a href="formations-certifiantes.html">Formations Certifiantes</a></li>
-            <li><a href="formations-diplomantes.html">Formations Diplômantes</a></li>
-            <li><a href="https://learning.bakeli.tech">Bakeli Learning</a></li>
-          </ul>
-        </li>
-        <li class="nav__dropdown">
-          <a href="#">Insertion</a>
-          <ul class="nav__submenu">
-            <li><a href="https://work.bakeli.tech">Bakeli Work</a></li>
-          </ul>
-        </li>
-        <li><a href="coachs.html">Coachs</a></li>
-        <li><a href="evenements.html">Événements</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="bourses.html">Bourses</a></li>
-      </ul>
-    </nav>
-
-    <div class="header__actions">
-      <a href="https://api.whatsapp.com/send?phone=221783013838" class="btn btn--outline">Contacter Bakeli</a>
-      <a href="inscription.html" class="btn btn--primary">S'inscrire</a>
-    </div>
-  </header>
-
-  <main>
-
-    
-    <section class="hero">
-      <div class="hero__content">
-        <h1 class="hero__title">Découvrez nos formations certifiantes</h1>
-        <p class="hero__text">
-          La formation de 6 mois propose un stage pédagogique de 3 mois, réservé aux étudiants
-          les plus assidus et performants. Pour la formation de 12 mois, un stage pédagogique
-          de 3 mois est garanti après 9 mois de formation. Un certificat professionnel est
-          délivré à l'issue de la validation de tous les modules.
-        </p>
-        <a href="inscription.html" class="btn btn--primary">Démarrer mon inscription</a>
-
-        <ul class="hero__infos">
-          <li>Durée : 6 à 12 mois</li>
-          <li>En ligne ou en présentiel</li>
-        </ul>
-      </div>
-
-      <div class="hero__image">
-        <img src="images/certifiante.png" alt="Étudiants en formation certifiante">
-      </div>
-    </section>
-
-    
-    <section class="filtre">
-      <h2 class="filtre__title">Dans quel domaine souhaitez-vous vous former ?</h2>
-      <div class="filtre__boutons">
-        <button class="filtre__btn filtre__btn--actif">Tous</button>
-        <button class="filtre__btn">Développement web et mobile</button>
-        <button class="filtre__btn">Marketing et communication digitale</button>
-      </div>
-    </section>
-
-  
-    <section class="formations">
-      <div class="formations__grille">
-
-        <article class="carte">
-          <span class="carte__duree">6 à 12 mois</span>
-          <h3 class="carte__titre">Développement Web (Front-End)</h3>
-          <p class="carte__texte">HTML5, CSS3, JavaScript, TypeScript, Bootstrap et React JS.</p>
-          <a href="#front-end" class="btn btn--primary">En savoir plus</a>
-        </article>
-
-        <article class="carte">
-          <span class="carte__duree">6 à 12 mois</span>
-          <h3 class="carte__titre">Développement Web (Back-End)</h3>
-          <p class="carte__texte">PHP, Python, MySQL, Django et Laravel.</p>
-          <a href="#back-end" class="btn btn--primary">En savoir plus</a>
-        </article>
-
-        <article class="carte">
-          <span class="carte__duree">6 à 12 mois</span>
-          <h3 class="carte__titre">Développement Mobile</h3>
-          <p class="carte__texte">Dart, Java, JavaScript, React Native et Flutter.</p>
-          <a href="#mobile" class="btn btn--primary">En savoir plus</a>
-        </article>
-
-        <article class="carte">
-          <span class="carte__duree">6 à 12 mois en alternance</span>
-          <h3 class="carte__titre">Community Management</h3>
-          <p class="carte__texte">Canva, CapCut, Figma, Meta Business Suite et plus encore.</p>
-          <a href="#community-management" class="btn btn--primary">En savoir plus</a>
-        </article>
-
-      </div>
-    </section>
-
-    
-    <section class="detail" id="front-end">
-      <h2 class="detail__title">Développement Web (Front-End)</h2>
-      <p class="detail__duree">Durée : entre 6 mois et 12 mois, pour ceux qui ont des bases en informatique</p>
-
-      <div class="detail__colonnes">
-        <div class="detail__bloc">
-          <h3>Vous allez apprendre à :</h3>
-          <ul>
-            <li>Intégrer des applications web</li>
-            <li>Rédiger des tests unitaires et fonctionnels</li>
-            <li>Rédiger un cahier des charges</li>
-            <li>Déployer des applications en ligne</li>
-            <li>Interagir avec des clients</li>
-            <li>Travailler à plusieurs dans un projet</li>
-          </ul>
-        </div>
-
-        <div class="detail__bloc">
-          <h3>Vous allez utiliser :</h3>
-          <p><strong>Les langages :</strong> HTML5, CSS3, JavaScript, TypeScript</p>
-          <p><strong>Les frameworks :</strong> Bootstrap, React JS</p>
-        </div>
-
-        <div class="detail__bloc">
-          <h3>Vous pouvez devenir :</h3>
-          <ul>
-            <li>Développeur web Front-End (spécialité React JS)</li>
-            <li>Intégrateur web (spécialité Bootstrap et React JS)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  
-  <footer class="footer">
-    <div class="footer__colonne">
-      <img src="images/logo.png" alt="Bakeli" class="footer__logo">
-      <p>
-        Bakeli est une école de formation professionnelle dans les nouvelles technologies
-        créée par Volkeno. Elle a formé + de 6000 étudiants et professionnels aux métiers
-        des nouvelles technologies et du digital.
-      </p>
-      <ul class="footer__reseaux">
-        <li><a href="https://twitter.com/Bakeli_school">X</a></li>
-        <li><a href="https://www.facebook.com/bakeli.tech">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/company/bakeli-school-of-technology/">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/bakelischool/">Instagram</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__colonne">
-      <h4>Bakeli</h4>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="coachs.html">Nos coachs</a></li>
-        <li><a href="evenements.html">Événements</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__colonne">
-      <h4>Contacts</h4>
-      <ul>
-        <li>Hlm Grand Yoff Villa n°241, Dakar</li>
-        <li><a href="tel:+221783013838">+221 78 301 38 38</a></li>
-        <li><a href="mailto:contact@bakeli.tech">contact@bakeli.tech</a></li>
-      </ul>
-    </div>
-
-    <p class="footer__copy">© Copyright 2026, Tous droits réservés.</p>
-  </footer>
-=======
->>>>>>> 0d3e5797a009f54136ac84bafb94420810cd0845
 
 </body>
 </html>
